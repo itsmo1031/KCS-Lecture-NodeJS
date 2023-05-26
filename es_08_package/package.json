@@ -1,0 +1,11 @@
+{
+  "name": "es_08_package",
+  "packageManager": "yarn@3.5.1",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}
