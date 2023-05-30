@@ -1,0 +1,19 @@
+{
+  "name": "20_express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemo": "^1.0.0",
+    "nodemon": "^2.0.22"
+  },
+  "description": ""
+}
