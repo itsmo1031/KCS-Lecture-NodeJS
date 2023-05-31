@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result"></div>
+  </body>
+  <script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'student-2.json');
+    xhr.send();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let students = JSON.parse(xhr.responseText);
+        renderHTML(students);
+      }
+    };
+    function renderHTML(contents) {
+      let htmlString = '';
+      for (let content of contents) {
+        htmlString += `
+      <h2>${content.name}</h2>
+      <ul>
+        <li>전공: ${content.major}</li>
+        <li>학년: ${content.grade}</li>
+      </ul>
+      <hr>
+    `;
+      }
+      document.getElementById('result').innerHTML = htmlString;
+    }
+  </script>
+</html>
